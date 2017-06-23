@@ -12,5 +12,9 @@ The app is developped on the framework ionic-cordova
 Build the app and push it on your device for developpment with the followed
 line:
 ```bash
-ionic cordova run android --device
+$ ionic cordova run android --device
+```
+or for iOS
+```bash
+$ ionic cordova run ios --device
 ```

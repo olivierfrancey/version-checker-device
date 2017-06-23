@@ -13,7 +13,6 @@ import { ScanComponent }    from '../components/scan/scan';
 import { ResultComponent }  from '../components/result/result';
 import { LoginComponent }   from '../components/login/login';
 import { ErrorComponent } from '../components/error/error';
-import { TestScanComponent } from '../components/test-scan/test-scan';
 import { KeysPipe } from '../pipes/keys/keys';
 
 @NgModule({
@@ -23,7 +22,6 @@ import { KeysPipe } from '../pipes/keys/keys';
     ResultComponent,
     LoginComponent,
     ErrorComponent,
-    TestScanComponent,
     KeysPipe
   ],
   imports: [
@@ -37,8 +35,7 @@ import { KeysPipe } from '../pipes/keys/keys';
     ScanComponent,
     ResultComponent,
     LoginComponent,
-    ErrorComponent,
-    TestScanComponent
+    ErrorComponent
   ],
   providers: [
     StatusBar,

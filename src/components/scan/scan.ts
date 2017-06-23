@@ -5,7 +5,6 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 import { ResultComponent } from '../result/result';
 import { ErrorComponent }   from '../error/error';
-import { TestScanComponent } from '../test-scan/test-scan';
 
 /**
  * Generated class for the ScanComponent component.
@@ -32,8 +31,7 @@ export class ScanComponent {
       }).then(barcodeData => {
         this.navCtrl.push(ResultComponent, {data: barcodeData});
       }, (err) => {
-        this.navCtrl.push(ResultComponent, {data: {text:'e7d2f170a55172bff23a73c932521e1ec8'}});
-        //this.navCtrl.push(ErrorComponent, {err})
+        this.navCtrl.push(ErrorComponent, {});
       });
   }
 

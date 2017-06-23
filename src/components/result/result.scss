@@ -1,0 +1,64 @@
+result {
+  padding: 15px;
+}
+
+table {
+  font-size: 1.3em
+}
+.right {
+  text-align: right;
+  padding: 5px;
+}
+.center {
+  width: 100%;
+  text-align: center;
+}
+.scroll-content {
+  overflow: hidden;
+}
+.current {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 15px;
+  background-color: #a2ff96;
+}
+.current .icon {
+  color: green;
+  font-size: 50em;
+}
+.superseded {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 15px;
+  background-color: #ff9696;
+}
+.superseded .icon {
+  color: red;
+  font-size: 50em;
+}
+.none {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 15px;
+  background-color: white;
+}
+.scan-button {
+  position: absolute;
+  bottom: 30px;
+}
+.check-icon {
+  position: absolute;
+  left: -130px;
+  top: -100px;
+  font-size: 700px;
+  z-index: 0;
+}
+.content {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  padding-top: 50px;
+}

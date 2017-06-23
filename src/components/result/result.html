@@ -1,0 +1,46 @@
+<!-- Generated template for the ResultComponent component -->
+
+<ion-content>
+
+<div *ngIf="load == true">
+
+</div>
+
+
+
+<div *ngIf="load == false">
+  <div *ngIf="doc.last_version == true" class="current center">
+    <ion-icon class="icon center" ios="ios-checkmark-circle-outline" md="md-checkmark-circle-outline"></ion-icon>
+  </div>
+  <div *ngIf="doc.last_version == false" class="superseded center">
+    <ion-icon class="icon" ios="ios-close-circle" md="md-close-circle"></ion-icon>
+  </div>
+  <div class="content">
+    <table>
+      <tr><td class="right">Projet:</td><td>{{doc.group_id}}</td></tr>
+      <tr><td class="right">Numéro:</td><td>{{doc.number}}</td></tr>
+      <tr><td class="right">Titre du document:</td><td>{{doc.title}}</td></tr>
+      <tr><td class="right">Sous-titre:</td><td>{{doc.sub_title}}</td></tr>
+      <tr><td class="right">Type de document:</td><td>{{doc.doc_type}}</td></tr>
+      <tr><td class="right">Format:</td><td>{{doc.size}}</td></tr>
+      <tr><td class="right">Version:</td><td>{{doc.version}}</td></tr>
+      <tr><td class="right">Auteur:</td><td>{{doc.author}}</td></tr>
+      <tr *ngIf="doc.file_name" col-span="2">
+        <button
+          ion-button
+          large
+          ></button>
+      </tr>
+    </table>
+  </div>
+  <div>
+  <button
+    ion-button
+    class="scan-button"
+    color="dark"
+    full
+    large
+    (click)="newScan()">NEW SCAN</button>
+  </div>
+</div>
+</ion-content>

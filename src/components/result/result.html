@@ -1,22 +1,42 @@
-<!-- Generated template for the ResultComponent component -->
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Check</ion-title>
+  </ion-navbar>
+</ion-header>
 
 <ion-content>
 
 <div *ngIf="load == true">
-
+  <img src="" alt="">
 </div>
 
-
-
 <div *ngIf="load == false">
+
   <div *ngIf="doc.last_version == true" class="current center">
-    <ion-icon class="icon center" ios="ios-checkmark-circle-outline" md="md-checkmark-circle-outline"></ion-icon>
+      <ion-icon class="icon center" ios="ios-checkmark-circle-outline" md="md-checkmark-circle-outline"></ion-icon>
   </div>
+
   <div *ngIf="doc.last_version == false" class="superseded center">
-    <ion-icon class="icon" ios="ios-close-circle" md="md-close-circle"></ion-icon>
+      <ion-icon class="icon" ios="ios-close-circle" md="md-close-circle"></ion-icon>
   </div>
+
   <div class="content">
+    <div class="">
+      {{msg}}
+    </div>
     <table>
+    <tr *ngIf="doc.last_version == true">
+      <td class="right"><h1>Version courante</h1></td><td></td>
+    </tr>
+    <tr *ngIf="doc.last_version == false">
+      <td class="right"><h1>Version obsolète</h1></td><td></td>
+    </tr>
+
+
       <tr><td class="right">Projet:</td><td>{{doc.group_id}}</td></tr>
       <tr><td class="right">Numéro:</td><td>{{doc.number}}</td></tr>
       <tr><td class="right">Titre du document:</td><td>{{doc.title}}</td></tr>

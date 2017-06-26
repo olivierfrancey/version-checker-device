@@ -23,8 +23,8 @@ export class MyApp {
 
     this.initializeApp();
 
-    // used for an example of ngFor and navigation
     this.pages = [
+      { title: 'Scan', component: ScanComponent },
       { title: 'Login', component: LoginComponent }
     ];
 

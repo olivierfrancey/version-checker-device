@@ -1,4 +1,28 @@
-<!-- Generated template for the ErrorComponent component -->
-<div>
-  {{text}}
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Scan error</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+<div class="message">
+  <h1><ion-icon ios="ios-build" md="md-build"></ion-icon> Ouch!</h1>
+  <p>An error with the scan appends, please try again or be sure you scan an
+  autentic QR-code of Version Checker.</p>
+  <p>You can contact the developper as well
+  if you think it is a good idea however the probability he will find the
+  problem is very close to zero...</p>
 </div>
+<div>
+<button
+  ion-button
+  class="scan-button"
+  color="dark"
+  full
+  large
+  (click)="newScan()">NEW SCAN</button>
+</div>
+</ion-content>

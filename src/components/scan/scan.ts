@@ -29,9 +29,10 @@ export class ScanComponent {
         resultDisplayDuration: 0,
         orientation: 'portrait'
       }).then(barcodeData => {
-        this.navCtrl.push(ResultComponent, {data: barcodeData});
+        this.navCtrl.setRoot(ResultComponent, {data: barcodeData});
       }, (err) => {
-        this.navCtrl.push(ErrorComponent, {});
+        this.navCtrl.setRoot(ResultComponent, {data: {text: 'e7d2f170a55172bff23a73c932521e1ec8'}}); //-- debug
+        //this.navCtrl.setRoot(ErrorComponent, {});
       });
   }
 

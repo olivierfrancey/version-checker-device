@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 
+import { NavController } from 'ionic-angular';
+
+import { ScanComponent } from '../scan/scan';
+
 /**
  * Generated class for the ErrorComponent component.
  *
@@ -12,11 +16,10 @@ import { Component } from '@angular/core';
 })
 export class ErrorComponent {
 
-  text: string;
+  constructor(private navController: NavController) {}
 
-  constructor() {
-    console.log('Hello ErrorComponent Component');
-    this.text = 'Erreur';
+  newScan(): void {
+    this.navController.setRoot(ScanComponent, {});
   }
 
 }

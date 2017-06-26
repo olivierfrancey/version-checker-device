@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { ScanComponent } from '../scan/scan';
+import { ErrorComponent } from '../error/error';
 
 import { DocService } from '../../services/doc.service';
 
@@ -42,11 +43,13 @@ export class ResultComponent implements OnInit{
         this.doc = data;
         console.log('doc2:'+this.doc);
         this.load = false;
+      }).catch(error => {
+        this.navController.setRoot(ErrorComponent, {});
       });
   }
 
   newScan(): void {
-    this.navController.push(ScanComponent, {});
+    this.navController.setRoot(ScanComponent, {});
   }
 
 }

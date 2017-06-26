@@ -16,9 +16,8 @@ export class DocService {
     console.log('url: '+url);
     return this.http.get(url)
       .toPromise()
-      .then(response => response.json().doc[0])
+      .then(response => response.json().doc)
       .catch(this.handleError);
-    //return Promise.resolve(DOC);
   }
 
   private handleError(error: any): Promise<any> {

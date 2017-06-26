@@ -44,7 +44,7 @@ export class ResultComponent implements OnInit{
         console.log('doc2:'+this.doc);
         this.load = false;
       }).catch(error => {
-        this.navController.setRoot(ErrorComponent, {});
+        this.navController.setRoot(ErrorComponent, {error: error});
       });
   }
 

@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { IonicModule } from 'ionic-angular';
-import { LoginComponent } from './login';
+import { AboutComponent } from './about';
 
 @NgModule({
   declarations: [
-    LoginComponent,
+    AboutComponent,
   ],
   imports: [
     IonicModule,
   ],
   exports: [
-    LoginComponent
+    AboutComponent
   ]
 })
-export class LoginComponentModule {}
+export class AboutComponentModule {}

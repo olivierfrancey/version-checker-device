@@ -31,8 +31,8 @@ export class ScanComponent {
       }).then(barcodeData => {
         this.navCtrl.setRoot(ResultComponent, {data: barcodeData});
       }, (err) => {
-        this.navCtrl.setRoot(ResultComponent, {data: {text: '9955cae38f33d5acdb53d6211b9c7df87c'}}); //-- debug
-        //this.navCtrl.setRoot(ErrorComponent, {});
+        //this.navCtrl.setRoot(ResultComponent, {data: {text: '9955cae38f33d5acdb53d6211b9c7df87c'}}); //-- debug
+        this.navCtrl.setRoot(ErrorComponent, {});
       });
   }
 

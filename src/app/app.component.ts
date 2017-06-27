@@ -4,7 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { ScanComponent } from '../components/scan/scan';
-import { LoginComponent } from '../components/login/login';
+import { AboutComponent } from '../components/about/about';
 
 @Component({
   templateUrl: 'app.html'
@@ -25,7 +25,7 @@ export class MyApp {
 
     this.pages = [
       { title: 'Scan', component: ScanComponent },
-      { title: 'Login', component: LoginComponent }
+      { title: 'About', component: AboutComponent }
     ];
 
   }

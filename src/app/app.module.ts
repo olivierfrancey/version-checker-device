@@ -11,18 +11,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { BarcodeScanner }   from '@ionic-native/barcode-scanner';
 import { ScanComponent }    from '../components/scan/scan';
 import { ResultComponent }  from '../components/result/result';
-import { LoginComponent }   from '../components/login/login';
-import { ErrorComponent } from '../components/error/error';
-import { KeysPipe } from '../pipes/keys/keys';
+import { ErrorComponent }   from '../components/error/error';
+import { AboutComponent }   from '../components/about/about';
 
 @NgModule({
   declarations: [
     MyApp,
     ScanComponent,
     ResultComponent,
-    LoginComponent,
     ErrorComponent,
-    KeysPipe
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -34,8 +32,8 @@ import { KeysPipe } from '../pipes/keys/keys';
     MyApp,
     ScanComponent,
     ResultComponent,
-    LoginComponent,
-    ErrorComponent
+    ErrorComponent,
+    AboutComponent
   ],
   providers: [
     StatusBar,

@@ -21,3 +21,4 @@ or for iOS
 ```bash
 $ ionic cordova run ios --device
 ```
+However it's better to build iOS app via X-Code.

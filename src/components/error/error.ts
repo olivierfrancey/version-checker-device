@@ -4,12 +4,6 @@ import { NavController, NavParams } from 'ionic-angular';
 
 import { ScanComponent } from '../scan/scan';
 
-/**
- * Generated class for the ErrorComponent component.
- *
- * See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
- * for more info on Angular Components.
- */
 @Component({
   selector: 'error',
   templateUrl: 'error.html'
@@ -22,7 +16,8 @@ export class ErrorComponent {
     private navController: NavController,
     private navParams: NavParams
   ) {
-    this.error_msg = navParams.get('error').toUpperCase();
+    this.error_msg = navParams.get('error') || 'NO MESSAGE';
+    console.log(this.error_msg);
   }
 
   newScan(): void {

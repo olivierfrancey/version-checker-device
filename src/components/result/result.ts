@@ -6,12 +6,6 @@ import { ErrorComponent } from '../error/error';
 
 import { DocService } from '../../services/doc.service';
 
-/**
- * Generated class for the ResultComponent component.
- *
- * See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
- * for more info on Angular Components.
- */
 @Component({
   selector: 'result',
   templateUrl: 'result.html',
@@ -43,7 +37,7 @@ export class ResultComponent implements OnInit{
         this.doc = data;
         console.log('doc2:'+this.doc);
         this.load = false;
-      }).catch(error => {
+      }, error => {
         this.navController.setRoot(ErrorComponent, {error: error});
       });
   }

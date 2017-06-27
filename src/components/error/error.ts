@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 import { ScanComponent } from '../scan/scan';
 
@@ -16,7 +16,14 @@ import { ScanComponent } from '../scan/scan';
 })
 export class ErrorComponent {
 
-  constructor(private navController: NavController) {}
+  error_msg: any;
+
+  constructor(
+    private navController: NavController,
+    private navParams: NavParams
+  ) {
+    this.error_msg = navParams.get('error').toUpperCase();
+  }
 
   newScan(): void {
     this.navController.setRoot(ScanComponent, {});

@@ -32,7 +32,7 @@ $ ionic cordova build --release android
 
 A built version of the app can be found in
 ```bash
-/platforms/android/build/outputs/apk/android-debug.apk
+/android-built/android-debug.apk
 ```
 
 

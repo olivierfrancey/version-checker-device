@@ -1,10 +1,12 @@
+# VERSION CHECKER
+
 This code is part of a project for the MAS-RAD
 
 This code is the mobile part of a combo mobile device - webservice
 
 You can find the webservice here: https://github.com/olivierfrancey/version-checker-server
 
-## Version
+## Versions
 * v 0.0.1 : initial version
 
 ## Technologie
@@ -22,3 +24,19 @@ or for iOS
 $ ionic cordova run ios --device
 ```
 However it's better to build iOS app via X-Code.
+
+Build the app and create an .apk file
+```bash
+$ ionic cordova build --release android
+```
+
+A built version of the app can be found in
+```bash
+/platforms/android/build/outputs/apk/android-debug.apk
+```
+
+
+## TODO
+
+* Authorisation server side
+* Make secure device data storage

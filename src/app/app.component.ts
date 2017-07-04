@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { ScanComponent } from '../components/scan/scan';
 import { AboutComponent } from '../components/about/about';
+import { LoginComponent } from '../components/login/login';
 
 @Component({
   templateUrl: 'app.html'
@@ -25,6 +26,7 @@ export class MyApp {
 
     this.pages = [
       { title: 'Scan', component: ScanComponent },
+      { title: 'Login', component: LoginComponent },
       { title: 'About', component: AboutComponent }
     ];
 

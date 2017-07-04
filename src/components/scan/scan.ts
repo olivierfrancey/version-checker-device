@@ -28,8 +28,8 @@ export class ScanComponent {
         }).then(barcodeData => {
           this.navCtrl.setRoot(ResultComponent, {data: barcodeData});
         }, (err) => {
-          //this.navCtrl.setRoot(ResultComponent, {data: {text: '9955cae38f33d5acdb53d6211b9c7df87c'}}); //-- debug
-          this.navCtrl.setRoot(ErrorComponent, {error: err});
+          this.navCtrl.setRoot(ResultComponent, {data: {text: '219eef269bfc43e5f94b940ddec92a2935'}}); //-- debug
+          //this.navCtrl.setRoot(ErrorComponent, {error: err});
         });
       });
     }
